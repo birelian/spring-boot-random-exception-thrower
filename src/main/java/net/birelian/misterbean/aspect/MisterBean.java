@@ -13,4 +13,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MisterBean {
+
+    // A probability factor of X will result in a 1/X probability of exception being thrown
+    int probabilityFactor() default 0;
+
 }
